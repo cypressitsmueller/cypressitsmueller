@@ -5,9 +5,7 @@ pipeline {
       image 'cypress/base:10'
     }
   }
-   environment {
-        VERSION = sh(returnStdout: true, script: 'git describe --tags')
-    }
+
   stages {
     // first stage installs node dependencies and Cypress binary
     stage('build') {
@@ -17,14 +15,6 @@ pipeline {
         // http://localhost:8080/pipeline-syntax/globals#env
 
         sh 'npm ci'
-      }
-    }
-
-    stage('start local server') {
-      steps {
-        // start local server in the background
-        // we will shut it down in "post" command block
-        sh 'nohup npm run start &'
       }
     }
 
