@@ -1,9 +1,9 @@
 pipeline {
     agent { docker { image 'node:6.3' } }
     stages {
-        stage('build') {
+        stage('e2e') {
             steps {
-                sh 'npm --version'
+                sh 'ng e2e'
             }
         }
     }
