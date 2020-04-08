@@ -5,7 +5,9 @@ pipeline {
       image 'cypress/base:10'
     }
   }
-
+   environment {
+        VERSION = sh(returnStdout: true, script: 'git describe --tags')
+    }
   stages {
     // first stage installs node dependencies and Cypress binary
     stage('build') {
@@ -13,7 +15,7 @@ pipeline {
         // there a few default environment variables on Jenkins
         // on local Jenkins machine (assuming port 8080) see
         // http://localhost:8080/pipeline-syntax/globals#env
-        echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
+
         sh 'npm ci'
       }
     }
