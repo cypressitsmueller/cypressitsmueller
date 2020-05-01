@@ -1,5 +1,5 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "../../cypresstest-e2e/tsconfig.json",
   "compilerOptions": {
     "sourceMap": false,
     "outDir": "../../dist/out-tsc"
