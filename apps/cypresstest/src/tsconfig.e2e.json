@@ -1,8 +1,0 @@
-{
-  "extends": "../../cypresstest-e2e/tsconfig.json",
-  "compilerOptions": {
-    "sourceMap": false,
-    "outDir": "../../dist/out-tsc"
-  },
-  "include": ["src/**/*.ts", "src/**/*.js"]
-}
