@@ -29,12 +29,10 @@
     "update": "ng update @nrwl/workspace",
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
-    "help": "nx help",
-    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
+    "help": "nx help"
   },
   "private": true,
   "dependencies": {
-    "@nrwl/angular": "9.2.2",
     "@angular/animations": "^9.1.0",
     "@angular/common": "^9.1.0",
     "@angular/compiler": "^9.1.0",
@@ -43,6 +41,8 @@
     "@angular/platform-browser": "^9.1.0",
     "@angular/platform-browser-dynamic": "^9.1.0",
     "@angular/router": "^9.1.0",
+    "@nrwl/angular": "9.2.2",
+    "@types/mocha": "^7.0.2",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.4",
     "zone.js": "^0.10.2"
@@ -55,11 +55,11 @@
     "@nrwl/cypress": "9.2.2",
     "@nrwl/jest": "9.2.2",
     "@nrwl/workspace": "9.2.2",
-    "@types/jest": "25.1.4",
+    "@types/jest": "^25.2.1",
     "@types/node": "~8.9.4",
     "angular-http-server": "^1.9.0",
     "codelyzer": "~5.0.1",
-    "cypress": "^4.3.0",
+    "cypress": "^4.5.0",
     "dotenv": "6.2.0",
     "eslint": "6.8.0",
     "jest": "25.2.3",
