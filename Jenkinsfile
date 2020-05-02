@@ -1,34 +1,9 @@
 pipeline {
-    agent {
-        docker {
-            image 'cypress/base:12.16.1'
-            args '-p 3000:3000'
-        }
-    }
+    agent { docker { image 'node:6.3' } }
     stages {
-
-            stage('Front-end') {
-
-                     agent { dockerfile true }
-
-                steps {
-                    sh 'node --version'
-                }
-            }
-        stage('Install Dependencies') {
+        stage('build') {
             steps {
-                sh 'npm ci'
-                sh 'npm run cy:verify'
-            }
-        }
-        stage('Build') {
-            steps {
-                sh 'npm run build'
-            }
-        }
-        stage('Test') {
-            steps {
-                sh 'npm run ci:cy-run'
+                sh 'npm --version'
             }
         }
     }
