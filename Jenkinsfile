@@ -18,7 +18,7 @@ pipeline {
                 // on local Jenkins machine (assuming port 8080) see
                 // http://localhost:8080/pipeline-syntax/globals#env
                 echo "Running build"
-                sh 'npm e2e'
+                sh 'npm run e2e'
                 sh 'npm run cy:verify'
               }
             }
