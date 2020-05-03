@@ -3,7 +3,7 @@
   "compilerOptions": {
     "sourceMap": false,
     "types": ["cypress"],
-    "outDir": "../../../../../dist/out-tsc"
+    "outDir": "../../../../dist/out-tsc"
   },
   "include": ["**/*.ts", "**/*.js"]
 }
