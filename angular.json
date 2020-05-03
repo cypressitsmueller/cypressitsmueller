@@ -115,7 +115,7 @@
           "builder": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/cypresstest/cypress.json",
-            "tsConfig": "apps/cypresstest/tsconfig.e2e.json",
+            "tsConfig": "apps/cypresstest/cypress/tsconfig.e2e.json",
             "devServerTarget": "cypresstest:serve"
           },
           "configurations": {
