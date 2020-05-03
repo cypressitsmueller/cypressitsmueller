@@ -90,6 +90,19 @@
             "passWithNoTests": true,
             "setupFile": "apps/cypresstest/src/test-setup.ts"
           }
+        },
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/cypresstest/src/cypress.json",
+            "tsConfig": "apps/cypresstest/src/cypress/tsconfig.e2e.json",
+            "devServerTarget": "cypresstest:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "cypresstest:serve:production"
+            }
+          }
         }
       }
     },
