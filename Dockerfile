@@ -6,6 +6,7 @@ FROM cypress/base:10
 RUN node --version
 RUN npm --version
 RUN npm install typescript
+RUN npm install -g @angular/cli
 WORKDIR /home/node/app
 # copy our test application
 COPY package.json package-lock.json ./
