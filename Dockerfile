@@ -9,7 +9,7 @@ RUN npm install typescript
 WORKDIR /home/node/app
 # copy our test application
 COPY package.json package-lock.json ./
-COPY app ./app
+COPY apps ./apps
 COPY serve.json ./
 # copy Cypress tests
 COPY cypress.json cypress ./
@@ -20,6 +20,6 @@ COPY cypress ./cypress
 ENV CI=1
 
 # install NPM dependencies and Cypress binary
-RUN npm ci
+RUN npm run e2e
 # check if the binary was installed successfully
 RUN $(npm bin)/cypress verify
