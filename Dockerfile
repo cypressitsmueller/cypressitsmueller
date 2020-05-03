@@ -10,10 +10,6 @@ WORKDIR /home/node/app
 # copy our test application
 COPY package.json package-lock.json ./
 COPY apps ./apps
-COPY serve.json ./
-# copy Cypress tests
-COPY cypress.json cypress ./
-COPY cypress ./cypress
 
 # avoid many lines of progress bars during install
 # https://github.com/cypress-io/cypress/issues/1243
